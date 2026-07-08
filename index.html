@@ -1,24 +1,435 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>Spa Landing</title>
-    <meta name="description" content="Spa Landing — built on Replit. Update this description to reflect the app." />
-    <meta name="robots" content="index, follow" />
-    <meta property="og:title" content="Spa Landing" />
-    <meta property="og:description" content="Spa Landing — built on Replit. Update this description to reflect the app." />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Spa Landing" />
-    <meta name="twitter:description" content="Spa Landing — built on Replit. Update this description to reflect the app." />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relax Studio | Салон преміум масажу та спа в Києві</title>
+    <meta name="description" content="Запрошуємо вас у Relax Studio. Авторські техніки масажу, ароматерапія та атмосфера повного спокою в самому центрі Києва. Запишіться онлайн.">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">RELAX STUDIO</a>
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#hero" class="nav-link active">Головна</a></li>
+                    <li><a href="#philosophy" class="nav-link">Про нас</a></li>
+                    <li><a href="#services" class="nav-link">Послуги</a></li>
+                    <li><a href="#gallery" class="nav-link">Атмосфера</a></li>
+                    <li><a href="#testimonials" class="nav-link">Відгуки</a></li>
+                    <li><a href="#booking" class="nav-link">Запис</a></li>
+                </ul>
+            </nav>
+            <div class="nav-cta">
+                <a href="#booking" class="btn btn-primary">Записатися</a>
+            </div>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Відкрити меню">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content scroll-reveal fade-in-up">
+                    <span class="hero-subtitle">Студія преміум релаксу</span>
+                    <h1 class="hero-title">Гармонія вашого <span class="serif-italic">тіла та розуму</span></h1>
+                    <p class="hero-description">Відновіть сили за допомогою авторських технік масажу, витончених арома олій та затишної атмосфери повного спокою в самому центрі міста.</p>
+                    <div class="hero-actions">
+                        <a href="#booking" class="btn btn-primary">Записатися на сеанс</a>
+                        <a href="#services" class="btn btn-outline">Наші послуги</a>
+                    </div>
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-droplet"></i></span>
+                            <span class="feature-text">Натуральні ефірні олії</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon"><i class="fa-solid fa-spa"></i></span>
+                            <span class="feature-text">Преміальний комфорт</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual scroll-reveal fade-in-up delay-200">
+                    <div class="image-wrapper">
+                        <img src="assets/spa-hero.jpg" alt="Інтер'єр Relax Studio" class="hero-img">
+                        <div class="hero-badge">
+                            <span class="badge-title">Працюємо щодня</span>
+                            <span class="badge-time">10:00 – 21:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Philosophy Section -->
+        <section id="philosophy" class="philosophy-section">
+            <div class="container philosophy-container">
+                <div class="philosophy-visual scroll-reveal fade-in-up">
+                    <div class="philosophy-img-wrapper">
+                        <div class="graphic-decor"></div>
+                        <div class="fallback-graphic-img">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="philosophy-content scroll-reveal fade-in-up delay-200">
+                    <span class="section-subtitle-badge">ФІЛОСОФІЯ</span>
+                    <h2 class="section-title">Місце, де час зупиняється</h2>
+                    <p class="philosophy-desc">Ми створили цей простір для тих, хто втомився від шаленого ритму сучасного міста. Наша студія — це не просто масажний салон, це справжній храм відновлення, де кожна деталь продумана для вашого комфорту.</p>
+                    <p class="philosophy-desc">Тепле світло, натуральні матеріали, авторські аромакомпозиції та руки справжніх майстрів своєї справи допоможуть вам повернутися до себе, відпустити напругу та знайти внутрішній баланс.</p>
+                    <div class="philosophy-stats">
+                        <div class="stat-box">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">років досвіду</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label">авторських технік</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-subtitle-badge">РИТУАЛИ</span>
+                    <h2 class="section-title">Наші послуги та ціни</h2>
+                    <p class="section-desc">Оберіть свій ідеальний ритуал відновлення. Кожен сеанс адаптується під ваші індивідуальні потреби та побажання.</p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-card scroll-reveal fade-in-up">
+                        <div class="service-image-decor p-bg-1">
+                            <i class="fa-solid fa-hands-holding"></i>
+                        </div>
+                        <div class="service-info">
+                            <h3 class="service-card-title">Аромамасаж усього тіла</h3>
+                            <p class="service-card-desc">М'яка техніка з використанням індивідуально підібраних натуральних ефірних олій. Глибоко розслабляє нервову систему та знімає стрес.</p>
+                            <div class="service-meta">
+                                <span class="service-duration"><i class="fa-regular fa-clock"></i> 60 / 90 хв</span>
+                                <span class="service-price">1 800 / 2 400 ₴</span>
+                            </div>
+                            <a href="#booking" class="btn btn-outline btn-full select-service-btn" data-service="Аромамасаж усього тіла">Записатися</a>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="service-card scroll-reveal fade-in-up delay-100">
+                        <div class="service-image-decor p-bg-2">
+                            <i class="fa-solid fa-fire-burner"></i>
+                        </div>
+                        <div class="service-info">
+                            <h3 class="service-card-title">Стоун-терапія</h3>
+                            <p class="service-card-desc">Масаж гарячими базальтовими каменями. Прогріває м'язи на глибокому рівні, покращує кровообіг, знімає спазми та енергетичний дисбаланс.</p>
+                            <div class="service-meta">
+                                <span class="service-duration"><i class="fa-regular fa-clock"></i> 90 хв</span>
+                                <span class="service-price">2 600 ₴</span>
+                            </div>
+                            <a href="#booking" class="btn btn-outline btn-full select-service-btn" data-service="Стоун-терапія">Записатися</a>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="service-card scroll-reveal fade-in-up delay-200">
+                        <div class="service-image-decor p-bg-3">
+                            <i class="fa-solid fa-face-smile-beam"></i>
+                        </div>
+                        <div class="service-info">
+                            <h3 class="service-card-title">Релакс масаж обличчя</h3>
+                            <p class="service-card-desc">Комплексний догляд, що включає делікатне очищення, лімфодренажний масаж обличчя, шиї та зони декольте, а також зволожуючу маску.</p>
+                            <div class="service-meta">
+                                <span class="service-duration"><i class="fa-regular fa-clock"></i> 45 хв</span>
+                                <span class="service-price">1 500 ₴</span>
+                            </div>
+                            <a href="#booking" class="btn btn-outline btn-full select-service-btn" data-service="Релакс масаж обличчя">Записатися</a>
+                        </div>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="service-card scroll-reveal fade-in-up delay-300">
+                        <div class="service-image-decor p-bg-4">
+                            <i class="fa-solid fa-align-justify"></i>
+                        </div>
+                        <div class="service-info">
+                            <h3 class="service-card-title">Глибокий масаж тканин</h3>
+                            <p class="service-card-desc">Інтенсивний проробляючий вплив на глибокі м'язи та фасції для зняття хронічної напруги, спазмів і швидкого відновлення рухливості.</p>
+                            <div class="service-meta">
+                                <span class="service-duration"><i class="fa-regular fa-clock"></i> 60 / 90 хв</span>
+                                <span class="service-price">2 000 / 2 700 ₴</span>
+                            </div>
+                            <a href="#booking" class="btn btn-outline btn-full select-service-btn" data-service="Глибокий масаж тканин">Записатися</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Atmosphere Gallery Section -->
+        <section id="gallery" class="gallery-section">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-subtitle-badge">ПРОСТІР</span>
+                    <h2 class="section-title">Атмосфера студії</h2>
+                    <p class="section-desc">Погляньте на наш затишний простір, де кожна кімната наповнена м'яким світлом та легким ароматом трав.</p>
+                </div>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item scroll-reveal fade-in-up">
+                        <div class="gallery-fallback-card g-bg-1">
+                            <i class="fa-solid fa-seedling"></i>
+                            <span class="gallery-label">Кімната ароматерапії</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item scroll-reveal fade-in-up delay-100">
+                        <div class="gallery-fallback-card g-bg-2">
+                            <i class="fa-solid fa-hot-tub-person"></i>
+                            <span class="gallery-label">Зона відпочинку</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item scroll-reveal fade-in-up delay-200">
+                        <div class="gallery-fallback-card g-bg-3">
+                            <i class="fa-solid fa-mountain"></i>
+                            <span class="gallery-label">Кімната стоун-терапії</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item scroll-reveal fade-in-up delay-300">
+                        <div class="gallery-fallback-card g-bg-4">
+                            <i class="fa-solid fa-water"></i>
+                            <span class="gallery-label">Чайний ритуал</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials-section">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-subtitle-badge">ВІДГУКИ</span>
+                    <h2 class="section-title">Слова наших гостей</h2>
+                </div>
+
+                <div class="testimonials-grid">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card scroll-reveal fade-in-up">
+                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="testimonial-text">"Після сеансу стоун-терапії я ніби народилася заново. Атмосфера салону дійсно допомагає повністю відключитися від робочих чатів і турбот. Сервіс на найвищому рівні."</p>
+                        <div class="testimonial-author">
+                            <h4 class="author-name">Олена К.</h4>
+                            <span class="author-meta">Маркетолог</span>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card scroll-reveal fade-in-up delay-100">
+                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="testimonial-text">"Довго шукав місце, де глибокий масаж спини поєднувався б з преміальним комфортом. Тут я знайшов ідеальний баланс. Приходжу щотижня і рекомендую всім колегам."</p>
+                        <div class="testimonial-author">
+                            <h4 class="author-name">Дмитро М.</h4>
+                            <span class="author-meta">Підприємець</span>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card scroll-reveal fade-in-up delay-200">
+                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="testimonial-text">"Кожна деталь — від запаху при вході до текстури рушників — свідчить про любов до клієнтів. Аромамасаж був неймовірним. Це справжня інвестиція у своє ментальне здоров'я."</p>
+                        <div class="testimonial-author">
+                            <h4 class="author-name">Анастасія В.</h4>
+                            <span class="author-meta">Дизайнер</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="container faq-container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-subtitle-badge">ДОВІДКА</span>
+                    <h2 class="section-title">Часті запитання</h2>
+                </div>
+
+                <div class="faq-accordion">
+                    <!-- FAQ 1 -->
+                    <div class="accordion-item scroll-reveal fade-in-up">
+                        <button class="accordion-trigger">
+                            <span>Чи потрібно готуватися до сеансу масажу?</span>
+                            <span class="icon-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Спеціальної підготовки не потрібно. Рекомендуємо прийняти теплий душ перед візитом та не вживати важку їжу за 1.5-2 години до початку вашого сеансу.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="accordion-item scroll-reveal fade-in-up">
+                        <button class="accordion-trigger">
+                            <span>Які олії ви використовуєте під час процедур?</span>
+                            <span class="icon-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Ми використовуємо тільки 100% натуральні рослинні олії першого холодного віджиму (мигдальна, кокосова, жожоба) в поєднанні з сертифікованими ефірними оліями терапевтичного класу.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="accordion-item scroll-reveal fade-in-up">
+                        <button class="accordion-trigger">
+                            <span>Чи є у вас подарункові сертифікати?</span>
+                            <span class="icon-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Так, ви можете придбати фірмовий друкований сертифікат у дерев'яному оформленні в нашій студії або замовити електронну версію на будь-яку послугу чи суму.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="accordion-item scroll-reveal fade-in-up">
+                        <button class="accordion-trigger">
+                            <span>За скільки часу потрібно приходити на сеанс?</span>
+                            <span class="icon-toggle"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Ми просимо приїжджати за 10-15 хвилин до початку сеансу. Це дозволить вам спокійно переодягнутися, випити чашку трав'яного чаю та налаштуватися на відпочинок.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Section -->
+        <section id="booking" class="booking-section">
+            <div class="container booking-grid">
+                <div class="booking-info scroll-reveal fade-in-up">
+                    <span class="section-subtitle-badge">ВАШ ВІЗИТ</span>
+                    <h2 class="section-title text-white">Час для себе</h2>
+                    <p class="booking-desc text-light">Залиште свої контактні дані, і наш адміністратор зв'яжеться з вами найближчим часом для підтвердження ідеального часу вашого сеансу.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-detail-item">
+                            <div class="detail-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div class="detail-text">
+                                <h5>Телефон</h5>
+                                <p>+38 (044) 123 45 67</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail-item">
+                            <div class="detail-icon"><i class="fa-solid fa-map-pin"></i></div>
+                            <div class="detail-text">
+                                <h5>Адреса</h5>
+                                <p>м. Київ, вул. Шовковична, 10</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail-item">
+                            <div class="detail-icon"><i class="fa-solid fa-clock"></i></div>
+                            <div class="detail-text">
+                                <h5>Режим роботи</h5>
+                                <p>Щодня 10:00 – 21:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="booking-form-container scroll-reveal fade-in-up delay-100">
+                    <div class="form-card">
+                        <form id="spa-booking-form" class="spa-form" name="spa-booking" data-netlify="true">
+                            <input type="hidden" name="form-name" value="spa-booking">
+                            <div class="form-group">
+                                <label for="form-name">Ваше ім'я</label>
+                                <input type="text" id="form-name" name="name" placeholder="Олександр" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-phone">Номер телефону</label>
+                                <input type="tel" id="form-phone" name="phone" placeholder="+38 (097) 000-00-00" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-service">Бажана послуга</label>
+                                <select id="form-service" name="service">
+                                    <option value="" disabled selected>Оберіть послугу...</option>
+                                    <option value="Аромамасаж усього тіла">Аромамасаж усього тіла (1800 ₴+)</option>
+                                    <option value="Стоун-терапія">Стоун-терапія (2600 ₴)</option>
+                                    <option value="Релакс масаж обличчя">Релакс масаж обличчя (1500 ₴)</option>
+                                    <option value="Глибокий масаж тканин">Глибокий масаж тканин (2000 ₴+)</option>
+                                    <option value="Інший запит">Інша процедура (консультація)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-date">Бажана дата візиту</label>
+                                <input type="date" id="form-date" name="date">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full form-submit-btn">
+                                Надіслати заявку <span class="btn-icon"><i class="fa-solid fa-paper-plane"></i></span>
+                            </button>
+                        </form>
+                        <!-- Form Success Popup Overlay -->
+                        <div class="form-success-popup" id="form-success-popup">
+                            <div class="success-icon"><i class="fa-solid fa-spa"></i></div>
+                            <h3>Дякуємо, <span id="success-name">Гість</span>!</h3>
+                            <p>Вашу заявку прийнято. Адміністратор зателефонує вам на номер <span id="success-phone">+38...</span> найближчим часом.</p>
+                            <button type="button" class="btn btn-outline" id="success-close-btn">Закрити</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <span class="logo">RELAX STUDIO</span>
+                <p class="footer-desc">Студія преміального релаксу в Києві. Відновлення гармонії тіла та спокою розуму за допомогою натуральної ароматерапії та професійного масажу.</p>
+            </div>
+            <div class="footer-links">
+                <h5>Навігація</h5>
+                <ul>
+                    <li><a href="#hero">Головна</a></li>
+                    <li><a href="#philosophy">Про нас</a></li>
+                    <li><a href="#services">Послуги</a></li>
+                    <li><a href="#gallery">Атмосфера</a></li>
+                    <li><a href="#booking">Запис</a></li>
+                </ul>
+            </div>
+            <div class="footer-socials">
+                <h5>Стежте за нами</h5>
+                <p>Приєднуйтеся до наших соцмереж, щоб дізнаватися про акції та поради зі спа-догляду.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Telegram"><i class="fa-solid fa-paper-plane"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p>&copy; 2026 Студія преміум релаксу. Всі права захищено.</p>
+                <p class="footer-care">Розроблено з турботою.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="app.js"></script>
+</body>
 </html>
